@@ -18,3 +18,42 @@
 	margin      : 0;
 	padding     : 0;
 }
+
+html {
+	font-size: 62.5%;
+}
+html, body {
+	margin           : 0;
+	background-color : var(--white);
+	color            : var(--black);
+}
+
+.flex-horizontal {
+	display        : flex;
+	flex-direction : row;
+}
+.flex-horizontal.reverse {
+	flex-direction : row-reverse;
+}
+
+.justify-space-between {
+	justify-content : space-between;
+}
+
+.grow {
+	flex-grow : 1;
+}
+
+/* NAV-BAR */
+a {
+	text-decoration : none;
+	color           : var(--black);
+}
+nav a {
+	margin  : 0;
+	padding : 1rem;
+}
+nav a.anchor.active {
+	border-top : 2px solid var(--blue);
+	color      : var(--blue);
+}
