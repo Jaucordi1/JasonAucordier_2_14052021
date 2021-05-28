@@ -8,6 +8,7 @@
 	--light-blue : #DEEBFF;
 
 	--grey       : #7F7F7F;
+	--light-grey : #C8C8C8;
 	--bg-grey    : #F2F2F2;
 
 	--radius     : 1.5rem;
@@ -151,9 +152,9 @@ body > main {
 
 /* SEARCH FORM */
 #search-form {
-	margin-top : 3rem;
-	display    : flex;
-	flex-flow  : row nowrap;
+	margin    : 3rem 0;
+	display   : flex;
+	flex-flow : row nowrap;
 }
 #search-form > label {
 	background-color : var(--bg-grey);
@@ -181,4 +182,40 @@ body > main {
 	font-weight      : bold;
 	font-size        : 1.5rem;
 	cursor           : pointer;
+}
+
+/* FILTERS */
+#filters-section {
+	display   : flex;
+	flex-flow : column nowrap;
+}
+#filters-section > .filters-container {
+	display         : flex;
+	flex-flow       : row wrap;
+	justify-content : space-between;
+}
+#filters-section > .filters-container > button {
+	display          : flex;
+	flex-flow        : row nowrap;
+	border           : 2px solid var(--light-grey);
+	background-color : var(--white);
+	border-radius    : calc(var(--radius) * 2);
+	padding          : 0 2rem 0 0;
+	margin-bottom    : 1rem;
+}
+#filters-section > .filters-container > button > .filter-icon {
+	--size           : 5rem;
+	background-color : var(--light-blue);
+	border-radius    : calc(var(--radius) * 2);
+	width            : var(--size);
+	height           : var(--size);
+	margin           : -2px 1rem -2px -2px;
+	padding          : 1.3rem;
+	font-size        : 2rem;
+	color            : var(--blue);
+}
+#filters-section > .filters-container > button > .filter-text {
+	align-self  : center;
+	flex-grow   : 1;
+	font-weight : bold;
 }
