@@ -193,6 +193,7 @@ body > main {
 	display         : flex;
 	flex-flow       : row wrap;
 	justify-content : space-between;
+	margin-bottom   : 3rem;
 }
 #filters-section > .filters-container > button {
 	display          : flex;
@@ -218,4 +219,25 @@ body > main {
 	align-self  : center;
 	flex-grow   : 1;
 	font-weight : bold;
+}
+
+.search-info {
+	display         : flex;
+	flex-flow       : row nowrap;
+	justify-content : space-between;
+	align-items     : flex-start;
+}
+.search-info > .fa-info {
+	color            : var(--blue);
+	background-color : var(--white);
+	border           : .2rem solid var(--bg-grey);
+	border-radius    : calc(var(--radius) * 2);
+	font-size        : 1.2rem;
+	padding          : .5rem .9rem;
+	margin-right     : 1rem;
+	text-align       : center;
+}
+.search-info > p {
+	font-size   : 1.4rem;
+	padding-top : .5rem;
 }
