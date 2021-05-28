@@ -4,16 +4,21 @@
 		<meta charset="UTF-8" />
 		<title>Reservia</title>
 
-		<link rel="stylesheet" href="css/index.css" />
+		<!-- Style !-->
+		<link href="css/index.css" rel="stylesheet" />
 	</head>
 	<body>
 		<header>
-			<nav class="flex-horizontal justify-space-between">
-				<img src="images/logo/Reservia.svg" alt="Logo Reservia" />
-				<div class="flex-horizontal reverse grow">
-					<a href="#">S'inscrire</a>
-					<a href="#activites" class="anchor">Activités</a>
-					<a href="#hebergements" class="anchor active">Hébergements</a>
+			<nav class="nav-bar">
+				<div class="nav-bar-container">
+					<a class="nav-bar-brand" href="/">
+						<img alt="Logo Reservia" src="images/logo/Reservia.svg" />
+					</a>
+					<a class="nav-bar-link text-blue bold" href="#">S'inscrire</a>
+					<div class="nav-bar-group">
+						<a class="nav-bar-link anchor active" href="#hebergements">Hébergements</a>
+						<a class="nav-bar-link anchor" href="#activites">Activités</a>
+					</div>
 				</div>
 			</nav>
 		</header>
@@ -21,13 +26,15 @@
 			<section class="flex-vertical">
 				<h1>Trouvez votre hébergement pour des vacances de rêve</h1>
 				<small class="text-grey">En plein centre ville ou en pleine nature</small>
-				<form action="#" id="search-form" class="flex-horizontal" style="max-width: 250px">
-					<label for="location_search" class="flex-vertical justify-center">
+				<form action="#" class="flex-horizontal" id="search-form">
+					<label class="flex-vertical justify-center" for="location_search">
 						<!--Location Pin icon-->
 						PIN
 					</label>
-					<input type="text" name="location_search" id="location_search" class="grow" />
-					<input type="submit" value="Rechercher" />
+					<input id="location_search" name="location_search" type="text" />
+					<button type="submit">
+						Rechercher
+					</button>
 				</form>
 			</section>
 			<section id="hebergements">
