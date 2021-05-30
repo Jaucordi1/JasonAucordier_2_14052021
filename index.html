@@ -2,26 +2,30 @@
 <html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
 
 		<!-- Primary Meta Tags -->
 		<title>Reservia</title>
-		<meta name="title" content="Reservia">
-		<meta name="description" content="Trouvez votre hébergement pour des vacances de rêve, en plein centre ville ou en pleine nature.">
+		<meta content="Reservia" name="title">
+		<meta content="Trouvez votre hébergement pour des vacances de rêve, en plein centre ville ou en pleine nature." name="description">
 
 		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://jaucordi1.github.io/JasonAucordier_2_14052021/">
-		<meta property="og:title" content="Reservia">
-		<meta property="og:description" content="Trouvez votre hébergement pour des vacances de rêve, en plein centre ville ou en pleine nature.">
-		<meta property="og:image" content="https://jaucordi1.github.io/JasonAucordier_2_14052021/images/hebergements/aw-creative-VGs8z60yT2c-unsplash.jpg">
+		<meta content="website" property="og:type">
+		<meta content="https://jaucordi1.github.io/JasonAucordier_2_14052021/" property="og:url">
+		<meta content="Reservia" property="og:title">
+		<meta content="Trouvez votre hébergement pour des vacances de rêve, en plein centre ville ou en pleine nature."
+		      property="og:description">
+		<meta content="https://jaucordi1.github.io/JasonAucordier_2_14052021/images/hebergements/aw-creative-VGs8z60yT2c-unsplash.jpg"
+		      property="og:image">
 
 		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image">
-		<meta property="twitter:url" content="/">
-		<meta property="twitter:title" content="Reservia">
-		<meta property="twitter:description" content="Trouvez votre hébergement pour des vacances de rêve, en plein centre ville ou en pleine nature.">
-		<meta property="twitter:image" content="https://jaucordi1.github.io/JasonAucordier_2_14052021/images/hebergements/aw-creative-VGs8z60yT2c-unsplash.jpg">
+		<meta content="summary_large_image" property="twitter:card">
+		<meta content="/" property="twitter:url">
+		<meta content="Reservia" property="twitter:title">
+		<meta content="Trouvez votre hébergement pour des vacances de rêve, en plein centre ville ou en pleine nature."
+		      property="twitter:description">
+		<meta content="https://jaucordi1.github.io/JasonAucordier_2_14052021/images/hebergements/aw-creative-VGs8z60yT2c-unsplash.jpg"
+		      property="twitter:image">
 
 		<!-- Style !-->
 		<link href="css/index.css" rel="stylesheet" />
@@ -32,11 +36,11 @@
 		<!--DEBUG SIZE DISPLAYER !-->
 		<script type="text/javascript">
 			window.addEventListener('DOMContentLoaded', () => {
-				const display = document.createElement('div');
-				display.style.position = "fixed";
-				display.style.bottom = "0px";
-				display.style.left = "0px";
-				display.style.right = "0px";
+				const display           = document.createElement('div');
+				display.style.position  = "fixed";
+				display.style.bottom    = "0px";
+				display.style.left      = "0px";
+				display.style.right     = "0px";
 				display.style.textAlign = "center";
 				document.body.append(display);
 
@@ -79,25 +83,25 @@
 			<section id="filters-section">
 				<h1>Filtres</h1>
 				<div class="filters-container">
-					<button type="button" class="filter">
+					<button class="filter" type="button">
 						<span class="filter-icon">
 							<i class="fa fa-money-bill"></i>
 						</span>
 						<span class="filter-text">Économique</span>
 					</button>
-					<button type="button" class="filter">
+					<button class="filter" type="button">
 						<span class="filter-icon">
 							<i class="fa fa-child"></i>
 						</span>
 						<span class="filter-text">Familial</span>
 					</button>
-					<button type="button" class="filter">
+					<button class="filter" type="button">
 						<span class="filter-icon">
 							<i class="fa fa-heart"></i>
 						</span>
 						<span class="filter-text">Romantique</span>
 					</button>
-					<button type="button" class="filter">
+					<button class="filter" type="button">
 						<span class="filter-icon">
 							<i class="fa fa-dog"></i>
 						</span>
@@ -107,6 +111,65 @@
 				<div class="search-info">
 					<i class="fa fa-info"></i>
 					<p>Plus de 500 logements sont disponibles dans cette ville</p>
+				</div>
+			</section>
+			<section id="popular-lodging">
+				<div class="flex-horizontal justify-space-between align-baseline">
+					<h2>Les plus populaires</h2>
+					<i class="fa fa-chart-line"></i>
+				</div>
+				<div class="flex-vertical">
+					<article class="card">
+						<img alt="Popular photography" class="card-thumbnail" src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
+						     srcset="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg, images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg 2x, images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg 3x, images/hebergements/1_xlarge/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg 4x" />
+						<!--<picture class="card-thumbnail">
+							<source media="(min-width: 990px)"
+							        srcset="images/hebergements/2_large/annie-spratt-Eg1qcIitAuA-unsplash.jpg,  2x" />
+							<source media="(min-width: 750px)" srcset="homepage-person@tablet.png, homepage-person@tablet-2x.png 2x" />
+							<img alt="Popular photography" srcset="homepage-person@mobile.png, homepage-person@mobile-2x.png 2x" />
+						</picture>-->
+						<div class="card-container">
+							<h3>Hôtel Le soleil du matin</h3>
+							<small>Nuit à partir de 128<b>€</b></small>
+							<div class="rating">
+								<i class="fa fa-star full"></i>
+								<i class="fa fa-star full"></i>
+								<i class="fa fa-star full"></i>
+								<i class="fa fa-star full"></i>
+								<i class="fa fa-star full"></i>
+							</div>
+						</div>
+					</article>
+					<article class="card">
+						<img alt="Popular photography" class="card-thumbnail" src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg"
+						     srcset="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg, images/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg 2x, images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg 3x, images/hebergements/1_xlarge/aw-creative-VGs8z60yT2c-unsplash.jpg 4x" />
+						<div class="card-container">
+							<h3>Au cœur de l'eau Chambres d'hôtes</h3>
+							<small>Nuit à partir de 71<b>€</b></small>
+							<div class="rating">
+								<i class="fa fa-star full"></i>
+								<i class="fa fa-star full"></i>
+								<i class="fa fa-star full"></i>
+								<i class="fa fa-star full"></i>
+								<i class="fa fa-star"></i>
+							</div>
+						</div>
+					</article>
+					<article class="card">
+						<img alt="Popular photography" class="card-thumbnail" src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
+						     srcset="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg, images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg 2x, images/hebergements/2_large/febrian-zakaria-sjvU0THccQA-unsplash.jpg 3x, images/hebergements/1_xlarge/febrian-zakaria-sjvU0THccQA-unsplash.jpg 4x" />
+						<div class="card-container">
+							<h3>Hôtel Tout Bleu et Blanc</h3>
+							<small>Nuit à partir de 68<b>€</b></small>
+							<div class="rating">
+								<i class="fa fa-star full"></i>
+								<i class="fa fa-star full"></i>
+								<i class="fa fa-star full"></i>
+								<i class="fa fa-star full"></i>
+								<i class="fa fa-star"></i>
+							</div>
+						</div>
+					</article>
 				</div>
 			</section>
 			<section id="hebergements">

@@ -14,6 +14,12 @@
 	--radius     : 1.5rem;
 }
 
+@media (max-width : 320px) {
+	html {
+		font-size : 3vw !important;
+	}
+}
+
 * {
 	box-sizing  : border-box;
 	font-family : Raleway, sans-serif;
@@ -40,6 +46,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1, h2 {
 	font-size : 2rem;
+}
+h3, h4 {
+	font-size : 1.8rem;
 }
 
 small {
@@ -257,4 +266,54 @@ body > main {
 .search-info > p {
 	font-size   : 1.4rem;
 	padding-top : .5rem;
+}
+
+/* POPULAR LODGING */
+#popular-lodging {
+	display          : flex;
+	flex-flow        : column nowrap;
+	background-color : var(--bg-grey);
+	padding          : 3rem 2rem;
+	margin           : 0 -3rem;
+}
+#popular-lodging > :first-child {
+	display   : flex;
+	flex-flow : row nowrap;
+}
+#popular-lodging > :last-child {
+	display   : flex;
+	flex-flow : column nowrap;
+}
+
+.card {
+	background-color : var(--white);
+	border-radius    : calc(var(--radius) * 1.5);
+	box-shadow       : 0 0 10px rgba(0, 0, 0, .15);
+	padding          : .5rem;
+	display          : flex;
+	flex-flow        : row nowrap;
+	margin           : .5rem 0;
+}
+.card-thumbnail {
+	width           : 40%;
+	height          : 35vw;
+	border-radius   : calc(var(--radius) * 1.2) 0 0 calc(var(--radius) * 1.2);
+	object-fit      : cover;
+	object-position : center center;
+	margin-right    : 2rem;
+}
+.card-container {
+	display   : flex;
+	flex-flow : column nowrap;
+}
+.rating {
+	display      : flex;
+	flex-flow    : row nowrap;
+	justify-self : flex-end;
+}
+.fa-star {
+	color : var(--bg-grey);
+}
+.fa-star.full {
+	color : var(--blue);
 }
