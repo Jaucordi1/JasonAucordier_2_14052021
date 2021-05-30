@@ -32,26 +32,6 @@
 
 		<!-- Font Awesome Kit !-->
 		<script crossorigin="anonymous" src="https://kit.fontawesome.com/47425e3146.js"></script>
-
-		<!--DEBUG SIZE DISPLAYER !-->
-		<script type="text/javascript">
-			window.addEventListener('DOMContentLoaded', () => {
-				const display           = document.createElement('div');
-				display.style.position  = "fixed";
-				display.style.bottom    = "0px";
-				display.style.left      = "0px";
-				display.style.right     = "0px";
-				display.style.textAlign = "center";
-				document.body.append(display);
-
-				const resize = (width, height) => {
-					display.innerHTML = `<b>${width}px</b> width<br/><b>${height}px</b> height`;
-				};
-				resize(window.innerWidth, window.innerHeight);
-
-				window.addEventListener('resize', () => resize(window.innerWidth, window.innerHeight));
-			});
-		</script>
 	</head>
 	<body>
 		<nav class="nav-bar">
@@ -326,7 +306,8 @@
 					</a>
 					<a class="card-link" href="#/activites/marseille/iles-du-frioul">
 						<article class="card card-full">
-							<img alt="Photography of Îles du Frioul at Marseille" class="card-thumbnail" src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
+							<img alt="Photography of Îles du Frioul at Marseille" class="card-thumbnail"
+							     src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
 							     srcset="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg, images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg 2x, images/activites/2_large/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg 3x, images/activites/1_xlarge/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg 4x" />
 							<div class="card-container">
 								<span class="card-title">Îles du Frioul</span>
@@ -355,7 +336,8 @@
 					</a>
 					<a class="card-link" href="#/activites/marseille/parc-longchamp">
 						<article class="card card-full">
-							<img alt="Photography of Parc Longchamp at Marseille" class="card-thumbnail" src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
+							<img alt="Photography of Parc Longchamp at Marseille" class="card-thumbnail"
+							     src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
 							     srcset="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg, images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg 2x, images/activites/2_large/lena-paulin-wH2-EJoDcV0-unsplash.jpg 3x, images/activites/1_xlarge/lena-paulin-wH2-EJoDcV0-unsplash.jpg 4x" />
 							<div class="card-container">
 								<span class="card-title">Parc Longchamp</span>
@@ -364,6 +346,30 @@
 					</a>
 				</div>
 			</section>
+			<footer id="footer">
+				<div class="footer-col">
+					<h3>À propos</h3>
+					<div class="footer-col-links">
+						<a href="#">Fonctionnement du site</a>
+						<a href="#">Conditions générales de vente</a>
+						<a href="#">Données et confidentialité</a>
+					</div>
+				</div>
+				<div class="footer-col">
+					<h3>Nos hébergements</h3>
+					<div class="footer-col-links">
+						<a href="#">Charte qualité</a>
+						<a href="#">Soumettre votre hôtel</a>
+					</div>
+				</div>
+				<div class="footer-col">
+					<h3>Assistance</h3>
+					<div class="footer-col-links">
+						<a href="#">Centre d'aide</a>
+						<a href="#">Nous contacter</a>
+					</div>
+				</div>
+			</footer>
 		</main>
 	</body>
 </html>
