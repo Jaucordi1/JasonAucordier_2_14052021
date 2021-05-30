@@ -2,31 +2,68 @@
 <html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Primary Meta Tags -->
 		<title>Reservia</title>
+		<meta name="title" content="Reservia">
+		<meta name="description" content="Trouvez votre hébergement pour des vacances de rêve, en plein centre ville ou en pleine nature.">
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://jaucordi1.github.io/JasonAucordier_2_14052021/">
+		<meta property="og:title" content="Reservia">
+		<meta property="og:description" content="Trouvez votre hébergement pour des vacances de rêve, en plein centre ville ou en pleine nature.">
+		<meta property="og:image" content="https://jaucordi1.github.io/JasonAucordier_2_14052021/images/hebergements/aw-creative-VGs8z60yT2c-unsplash.jpg">
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="/">
+		<meta property="twitter:title" content="Reservia">
+		<meta property="twitter:description" content="Trouvez votre hébergement pour des vacances de rêve, en plein centre ville ou en pleine nature.">
+		<meta property="twitter:image" content="https://jaucordi1.github.io/JasonAucordier_2_14052021/images/hebergements/aw-creative-VGs8z60yT2c-unsplash.jpg">
 
 		<!-- Style !-->
 		<link href="css/index.css" rel="stylesheet" />
 
 		<!-- Font Awesome Kit !-->
 		<script crossorigin="anonymous" src="https://kit.fontawesome.com/47425e3146.js"></script>
+
+		<!--DEBUG SIZE DISPLAYER !-->
+		<script type="text/javascript">
+			window.addEventListener('DOMContentLoaded', () => {
+				const display = document.createElement('div');
+				display.style.position = "fixed";
+				display.style.bottom = "0px";
+				display.style.left = "0px";
+				display.style.right = "0px";
+				display.style.textAlign = "center";
+				document.body.append(display);
+
+				const resize = (width, height) => {
+					display.innerHTML = `<b>${width}px</b> width<br/><b>${height}px</b> height`;
+				};
+				resize(window.innerWidth, window.innerHeight);
+
+				window.addEventListener('resize', () => resize(window.innerWidth, window.innerHeight));
+			});
+		</script>
 	</head>
 	<body>
-		<header>
-			<nav class="nav-bar">
-				<div class="nav-bar-container">
-					<a class="nav-bar-brand" href="/">
-						<img alt="Logo Reservia" src="images/logo/Reservia.svg" />
-					</a>
-					<a class="nav-bar-link text-blue bold" href="#">S'inscrire</a>
-					<div class="nav-bar-group">
-						<a class="nav-bar-link anchor active" href="#hebergements">Hébergements</a>
-						<a class="nav-bar-link anchor" href="#activites">Activités</a>
-					</div>
+		<nav class="nav-bar">
+			<div class="nav-bar-container">
+				<a class="nav-bar-brand" href="/">
+					<img alt="Logo Reservia" src="images/logo/Reservia.svg" />
+				</a>
+				<a class="nav-bar-link text-blue bold" href="#">S'inscrire</a>
+				<div class="nav-bar-group">
+					<a class="nav-bar-link anchor active" href="#hebergements">Hébergements</a>
+					<a class="nav-bar-link anchor" href="#activites">Activités</a>
 				</div>
-			</nav>
-		</header>
+			</div>
+		</nav>
 		<main>
-			<section class="flex-vertical">
+			<header id="header">
 				<h1>Trouvez votre hébergement pour des vacances de rêve</h1>
 				<small class="text-grey">En plein centre ville ou en pleine nature</small>
 				<form action="#" class="flex-horizontal" id="search-form">
@@ -38,29 +75,29 @@
 						<i class="fa fa-search text-white"></i>
 					</button>
 				</form>
-			</section>
+			</header>
 			<section id="filters-section">
 				<h1>Filtres</h1>
 				<div class="filters-container">
-					<button type="button">
+					<button type="button" class="filter">
 						<span class="filter-icon">
 							<i class="fa fa-money-bill"></i>
 						</span>
 						<span class="filter-text">Économique</span>
 					</button>
-					<button type="button">
+					<button type="button" class="filter">
 						<span class="filter-icon">
 							<i class="fa fa-child"></i>
 						</span>
 						<span class="filter-text">Familial</span>
 					</button>
-					<button type="button">
+					<button type="button" class="filter">
 						<span class="filter-icon">
 							<i class="fa fa-heart"></i>
 						</span>
 						<span class="filter-text">Romantique</span>
 					</button>
-					<button type="button">
+					<button type="button" class="filter">
 						<span class="filter-icon">
 							<i class="fa fa-dog"></i>
 						</span>
