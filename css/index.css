@@ -173,7 +173,7 @@ a {
 }
 
 body > main {
-	padding   : 0 3rem;
+	padding   : 0 2rem;
 	max-width : 1200px;
 	margin    : 0 auto;
 }
@@ -230,7 +230,7 @@ body > main {
 	border-radius    : calc(var(--radius) * 2);
 	flex-shrink      : 1;
 	padding          : 0 2rem 0 0;
-	margin           : 0 1rem 1rem 0;
+	margin           : 0 .9rem 1rem 0;
 }
 .filter-icon {
 	--size           : 5rem;
