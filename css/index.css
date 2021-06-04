@@ -343,7 +343,7 @@ body > main {
 }
 
 .card-link {
-	display       : block;
+	display       : flex;
 	margin-bottom : 2rem;
 }
 .card-link:hover > .card {
@@ -375,6 +375,41 @@ body > main {
 }
 
 /* ACTIVITIES SECTION */
+#activites > :last-child {
+	display               : grid;
+	grid-template-areas   :
+		'FIRST SECOND FOURTH FIFTH'
+		'FIRST THIRD  FOURTH SIXTH';
+	grid-template-columns : repeat(4, 1fr);
+	grid-template-rows    : repeat(2, auto);
+	grid-gap              : 3rem;
+}
+#activites > :last-child > .card-link:nth-child(3n+1) {
+	grid-row : 1 / 3;
+}
+#activites > :last-child > .card-link:nth-child(3n+2) {
+	grid-row : 1 / 2;
+}
+#activites > :last-child > .card-link:nth-child(3n+2) > .card.card-full > .card-thumbnail,
+#activites > :last-child > .card-link:nth-child(3n+3) > .card.card-full > .card-thumbnail {
+	max-height : calc(390px / 2);
+}
+#activites > :last-child > .card-link:nth-child(3n+3) {
+	grid-row : 2 / 3;
+}
+
+#activites > :last-child > .card-link {
+	margin : 0;
+}
+#activites > :last-child > .card-link > .card.card-full {
+	flex-grow : 1;
+}
+#activites > :last-child > .card-link > .card.card-full > .card-thumbnail {
+	height     : auto;
+	flex-grow  : 1;
+	object-fit : cover;
+}
+
 #activites .card-title {
 	margin-top : 1rem;
 }
