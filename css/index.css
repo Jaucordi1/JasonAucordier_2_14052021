@@ -84,50 +84,6 @@ a:hover {
 	font-weight : bold;
 }
 
-.flex-vertical {
-	display        : flex;
-	flex-direction : column;
-}
-
-.flex-horizontal {
-	display        : flex;
-	flex-direction : row;
-}
-.flex-horizontal.reverse {
-	flex-direction : row-reverse;
-}
-
-.wrap {
-	flex-wrap : wrap;
-}
-
-.justify-center {
-	justify-content : center;
-}
-.justify-end {
-	justify-content : flex-end;
-}
-.justify-space-between {
-	justify-content : space-between;
-}
-
-.align-start {
-	align-items : flex-start;
-}
-.align-end {
-	align-items : flex-end;
-}
-.align-center {
-	align-items : center;
-}
-.align-baseline {
-	align-items : baseline;
-}
-
-.align-self-end {
-	align-self : flex-end;
-}
-
 /* CARDS */
 .card {
 	background-color : var(--white);
@@ -283,6 +239,9 @@ body > main {
 	flex-flow : row nowrap;
 }
 #search-form > label {
+	display          : flex;
+	flex-flow        : column nowrap;
+	justify-content  : center;
 	background-color : var(--bg-grey);
 	padding          : 1rem 2rem;
 	border-radius    : var(--radius) 0 0 var(--radius);
