@@ -294,6 +294,8 @@ body > main {
 	margin-bottom : 1.5rem;
 }
 .filters-container {
+	display         : flex;
+	flex-flow       : row wrap;
 	justify-content : flex-start;
 	margin-bottom   : 3rem;
 }
@@ -306,17 +308,8 @@ body > main {
 	flex-shrink      : 1;
 	padding          : 0 2rem 0 0;
 	margin           : 0 .9rem 1rem 0;
-}
-.filter-icon {
-	--size           : 5rem;
-	background-color : var(--light-blue);
-	border-radius    : calc(var(--radius) * 2);
-	width            : var(--size);
-	height           : var(--size);
-	margin           : -2px 1rem -2px -2px;
-	padding          : 1.3rem;
-	font-size        : 2rem;
-	color            : var(--blue);
+	cursor           : pointer;
+	transition       : border-color .25s;
 }
 .filter-text {
 	font-size   : 1.5rem;
@@ -324,6 +317,65 @@ body > main {
 	font-weight : bold;
 	text-align  : left;
 	white-space : nowrap;
+}
+
+.filter-icon {
+	--size              : 5rem;
+	background-color    : var(--light-blue);
+	border-radius       : calc(var(--radius) * 2);
+	width               : var(--size);
+	height              : var(--size);
+	margin              : -2px 1rem -2px -2px;
+	font-size           : 2rem;
+	color               : var(--blue);
+	transition-property : background-color, color, width, height, margin, font-size;
+	transition-duration : .3s;
+	position            : relative;
+}
+.filter-icon .fa,
+.filter-icon .cross-icon::before {
+	position        : absolute;
+	top             : 0;
+	bottom          : 0;
+	left            : 0;
+	right           : 0;
+	display         : flex;
+	flex-flow       : column;
+	justify-content : center;
+	align-items     : center;
+	transition      : opacity .3s;
+	z-index         : 1;
+}
+.filter-icon .cross-icon {
+	opacity : 0;
+}
+.filter-icon .cross-icon::before {
+	content : '\f00d';
+}
+
+.filter:hover {
+	flex-flow    : row nowrap;
+	border-color : var(--grey);
+	padding      : 0 2rem 0 0;
+	margin       : 0 .9rem 1rem 0;
+}
+.filter:hover .filter-icon {
+	--size           : 5.2rem;
+	background-color : var(--blue);
+	margin           : calc(-2px - .1rem) calc(1rem - .1rem) calc(-2px - .1rem) calc(-2px - .1rem);
+	padding          : 1.4rem;
+	font-size        : 2.2rem;
+	color            : var(--light-blue);
+}
+.filter:hover .filter-icon:hover .cross-icon {
+	opacity : 1;
+}
+.filter:hover .filter-icon:hover .fa:first-child {
+	opacity : 0;
+}
+
+.fa-heart::before {
+	padding-top: 2px;
 }
 
 .search-info {
