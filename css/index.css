@@ -375,10 +375,10 @@ body > main {
 	font-size        : 2.2rem;
 	color            : var(--light-blue);
 }
-.filter.active .filter-icon:hover .cross-icon{
+.filter.active:hover .filter-icon .cross-icon{
 	opacity : 1;
 }
-.filter.active .filter-icon:hover .fa:first-child{
+.filter.active:hover .filter-icon .fa:first-child{
 	opacity : 0;
 }
 
