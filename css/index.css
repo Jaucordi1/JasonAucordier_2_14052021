@@ -37,6 +37,7 @@ body {
 	background-color : var(--white);
 	color            : var(--black);
 	font-size        : 2rem;
+	width            : 100vw;
 }
 
 /* HEADINGS */
@@ -88,7 +89,7 @@ a:hover {
 .card {
 	background-color : var(--white);
 	border-radius    : calc(var(--radius) * 1.5);
-	box-shadow       : 0 0 1.5rem var(--light-grey);
+	box-shadow       : 0 0 1.5rem rgba(0, 0, 0, .1);
 	transition       : box-shadow .25s;
 	padding          : .5rem;
 	display          : flex;
@@ -127,7 +128,7 @@ a:hover {
 	margin-top      : .2rem;
 }
 .fa-star {
-	color        : var(--bg-grey);
+	color        : var(--light-grey);
 	margin-right : .1rem;
 }
 .fa-star.full {
@@ -234,7 +235,12 @@ a:hover {
 body > main {
 	--horizontal-padding : 2rem;
 
+	display              : flex;
+	flex-flow            : column nowrap;
+	justify-content      : flex-start;
+	align-items          : stretch;
 	padding              : 0 var(--horizontal-padding);
+	overflow             : hidden;
 }
 
 /* HEADER */
@@ -375,7 +381,7 @@ body > main {
 }
 
 .fa-heart::before {
-	padding-top: 2px;
+	padding-top : 2px;
 }
 
 .search-info {
@@ -398,6 +404,14 @@ body > main {
 .search-info > :last-child {
 	font-size   : 1.6rem;
 	padding-top : .5rem;
+}
+
+/* FIRST ROW */
+#first-row {
+	display       : flex;
+	flex-flow     : column nowrap;
+	justify-items : flex-start;
+	align-items   : stretch;
 }
 
 /* POPULAR LODGING SECTION */
@@ -427,13 +441,13 @@ body > main {
 }
 
 /* LODGING SECTION */
-#hebergements, #activites {
+#lodging, #activites {
 	display   : flex;
 	flex-flow : column nowrap;
 	padding   : 2rem 2rem;
 	margin    : 0 -2rem 1rem -2rem;
 }
-#hebergements > :first-child {
+#lodging > :first-child {
 	display    : flex;
 	flex-flow  : row nowrap;
 	margin-top : 1rem;
@@ -458,13 +472,13 @@ body > main {
 }
 
 #popular-lodging > :first-child,
-#hebergements > :first-child,
+#lodging > :first-child,
 #activites > :first-child {
 	margin-bottom : 2.5rem;
 }
 
 #popular-lodging > :last-child > :last-child,
-#hebergements > :last-child > :last-child,
+#lodging > :last-child > :last-child,
 #activites > :last-child > :last-child {
 	margin-bottom : 0;
 }
@@ -548,9 +562,17 @@ body > main {
 /* DESKTOP */
 @media (min-width : 769px) {
 
-	/* CONTENT */
-	body > main {
-		--horizontal-padding : 4rem;
+	:root {
+		--spacing-1           : 2rem;
+		--spacing-2           : calc(2 * var(--spacing-1));
+
+		--spacing-n1          : calc(-1 * var(--spacing-1));
+		--spacing-n2          : calc(2 * var(--spacing-n1));
+
+		--body-padding        : calc(2 * var(--spacing-2));
+
+		--lodging-section     : calc(70vw - var(--body-padding));
+		--loding-section-item : calc(var(--lodging-section) / 3);
 	}
 
 	/* DESKTOP NAV-BAR */
@@ -581,12 +603,146 @@ body > main {
 	.nav-bar-link.anchor {
 		padding       : 4rem 2.5rem 3rem 2.5rem;
 		width         : auto;
-		border-top    : 3px solid transparent;
+		border-top    : 3px solid var(--light-grey);
 		border-bottom : none;
+		transition    : border .25s;
 	}
 	.nav-bar-link.anchor:hover {
 		color           : var(--blue);
+		border-color    : var(--blue);
 		text-decoration : none;
+	}
+
+	/* CONTENT */
+	body > main {
+		padding : 0;
+	}
+	body > main > *:not(#footer) {
+		width        : 100%;
+		padding      : 0 var(--spacing-2) !important;
+		margin-left  : 0 !important;
+		margin-right : 0 !important;
+	}
+
+	/* FIRST ROW SECTION */
+	#first-row {
+		margin-bottom : var(--spacing-2);
+	}
+	#lodging, #popular-lodging {
+		margin : 0;
+		width  : 100%;
+	}
+
+	/* LODGING SECTION */
+	#lodging {
+		background-color : var(--bg-grey);
+		border-radius    : var(--radius);
+		padding          : var(--spacing-2);
+	}
+	#lodging :first-child {
+		margin-top : 0;
+	}
+	#lodging-cards {
+		flex-flow       : row wrap;
+		justify-content : space-between;
+		justify-items   : stretch;
+		align-items     : stretch;
+		margin          : 0 calc(.5 * var(--spacing-n1));
+	}
+	#lodging-cards > * {
+		max-width : 50%;
+		width     : auto;
+		padding   : 0 calc(.5 * var(--spacing-1)) calc(.5 * var(--spacing-1)) calc(.5 * var(--spacing-1));
+	}
+	#lodging-cards > * > * {
+		flex-grow : 1;
+	}
+	#lodging-cards > * .card-thumbnail {
+		height : 110px;
+	}
+	#lodging-cards > :nth-child(3n+3) {
+		margin-right : 0;
+	}
+	#lodging-cards > :nth-last-child(-n+3) {
+		margin-bottom : 0;
+	}
+
+	/* POPULAR LODGING SECTION */
+	#popular-lodging {
+		border-radius : var(--radius);
+
+		margin        : 0 0 var(--spacing-2);
+		padding       : var(--spacing-2);
+	}
+	#popular-lodging > :first-child {
+		margin-top : 0;
+	}
+	#popular-lodging-cards {
+
+	}
+	#popular-lodging-cards > * {
+		/*max-height    : calc(.5 * var(--loding-section-item-width));*/
+		margin-bottom : calc(.75 * var(--spacing-1));
+		width         : 100%;
+	}
+	#popular-lodging-cards > :last-child {
+		margin-bottom : 0;
+	}
+	#popular-lodging-cards > * .card-thumbnail {
+		width     : 32%;
+		min-width : 32%;
+		height    : 133px;
+	}
+	#popular-lodging-cards > * .card-thumbnail img {
+		width  : 100%;
+		height : 133px;
+	}
+
+	.read-more-link {
+		align-self : flex-start;
+	}
+
+	#activites {
+		margin-bottom : var(--spacing-2);
+	}
+
+	#footer {
+		flex-flow       : row nowrap;
+		justify-content : space-between;
+		align-items     : flex-start;
+		margin          : 0;
+		padding         : var(--spacing-2);
+	}
+	.footer-col {
+		display         : flex;
+		flex-flow       : column nowrap;
+		width           : 33%;
+		justify-content : center;
+		margin-bottom   : 0;
+	}
+}
+@media (min-width : 1025px) {
+	#first-row {
+		flex-flow     : row nowrap;
+		margin-bottom : var(--spacing-2);
+	}
+	#lodging, #popular-lodging {
+		margin : 0;
+	}
+	#lodging {
+		order        : -1;
+		width        : 65%;
+		margin-right : var(--spacing-2);
+	}
+	#lodging .card-container {
+		flex-grow : 1;
+	}
+	#lodging-cards > * {
+		max-width : 33%;
+	}
+	#popular-lodging {
+		width  : 35%;
+		margin : 0;
 	}
 
 	/* DESKTOP ACTIVITIES GRID */
