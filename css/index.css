@@ -359,13 +359,15 @@ body > main {
 	content : '\f00d';
 }
 
-.filter:hover {
+.filter:hover,
+.filter.active {
 	flex-flow    : row nowrap;
 	border-color : var(--grey);
 	padding      : 0 2rem 0 0;
 	margin       : 0 .9rem 1rem 0;
 }
-.filter:hover .filter-icon {
+.filter:hover .filter-icon,
+.filter.active .filter-icon{
 	--size           : 5.2rem;
 	background-color : var(--blue);
 	margin           : calc(-2px - .1rem) calc(1rem - .1rem) calc(-2px - .1rem) calc(-2px - .1rem);
@@ -373,10 +375,10 @@ body > main {
 	font-size        : 2.2rem;
 	color            : var(--light-blue);
 }
-.filter:hover .filter-icon:hover .cross-icon {
+.filter.active .filter-icon:hover .cross-icon{
 	opacity : 1;
 }
-.filter:hover .filter-icon:hover .fa:first-child {
+.filter.active .filter-icon:hover .fa:first-child{
 	opacity : 0;
 }
 
