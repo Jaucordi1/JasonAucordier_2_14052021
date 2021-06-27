@@ -88,7 +88,7 @@ a:hover {
 /* CARDS */
 .card {
 	background-color : var(--white);
-	border-radius    : calc(var(--radius) * 1.5);
+	border-radius    : calc(1.5 * var(--radius));
 	box-shadow       : 0 0 1.5rem rgba(0, 0, 0, .1);
 	transition       : box-shadow .25s;
 	padding          : .5rem;
