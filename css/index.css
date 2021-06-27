@@ -13,6 +13,7 @@
 	--bg-grey    : #F2F2F2;
 
 	--radius     : 1.5rem;
+	--img-radius : calc(1.2 * var(--radius));
 }
 
 /* FONT & RESET */
@@ -105,7 +106,7 @@ a:hover {
 	height          : 100%;
 	object-fit      : cover;
 	object-position : center center;
-	border-radius   : calc(var(--radius) * 1.2) calc(var(--radius) * 1.2) 0 0;
+	border-radius   : var(--img-radius) var(--img-radius) 0 0;
 }
 .card-container {
 	display         : flex;
@@ -147,7 +148,7 @@ a:hover {
 .card.card-horizontal > .card-thumbnail > img {
 	width         : 32vw;
 	height        : 36vw;
-	border-radius : calc(var(--radius) * 1.2) 0 0 calc(var(--radius) * 1.2);
+	border-radius : var(--img-radius) 0 0 var(--img-radius);
 }
 .card.card-horizontal > .card-container {
 	padding-bottom : 1rem;
@@ -313,7 +314,7 @@ body > main {
 	flex-flow        : row nowrap;
 	border           : 2px solid var(--light-grey);
 	background-color : var(--white);
-	border-radius    : calc(var(--radius) * 2);
+	border-radius    : calc(2 * var(--radius));
 	flex-shrink      : 1;
 	padding          : 0 2rem 0 0;
 	margin           : 0 .9rem 1rem 0;
@@ -331,7 +332,7 @@ body > main {
 .filter-icon {
 	--size              : 5rem;
 	background-color    : var(--light-blue);
-	border-radius       : calc(var(--radius) * 2);
+	border-radius       : calc(2 * var(--radius));
 	width               : var(--size);
 	height              : var(--size);
 	margin              : -2px 1rem -2px -2px;
@@ -400,7 +401,7 @@ body > main {
 	color            : var(--blue);
 	background-color : var(--white);
 	border           : .2rem solid var(--bg-grey);
-	border-radius    : calc(var(--radius) * 2);
+	border-radius    : calc(2 * var(--radius));
 	font-size        : 1.2rem;
 	padding          : .5rem .9rem;
 	margin           : .1rem 1rem 0 0;
@@ -577,7 +578,7 @@ body > main {
 		--body-padding        : calc(2 * var(--spacing-2));
 
 		--lodging-section     : calc(70vw - var(--body-padding));
-		--loding-section-item : calc(var(--lodging-section) / 3);
+		--loding-section-item : calc(.33 * var(--lodging-section));
 	}
 
 	/* DESKTOP NAV-BAR */
@@ -639,7 +640,7 @@ body > main {
 		align-items     : center;
 	}
 	#filters-section > :first-child {
-		margin-right: var(--spacing-2);
+		margin-right : var(--spacing-2);
 	}
 	.filters-container {
 		flex-grow       : 1;
@@ -648,11 +649,11 @@ body > main {
 		align-items     : center;
 	}
 	.filters-container > * {
-		margin: calc(.5 * var(--spacing-1)) calc(.5 * var(--spacing-1)) calc(.5 * var(--spacing-1)) 0 !important;
+		margin : calc(.5 * var(--spacing-1)) calc(.5 * var(--spacing-1)) calc(.5 * var(--spacing-1)) 0 !important;
 	}
 	#filters-section > :last-child {
-		width : 100%;
-		margin: var(--spacing-1) 0 var(--spacing-2) 0 !important;
+		width  : 100%;
+		margin : var(--spacing-1) 0 var(--spacing-2) 0 !important;
 	}
 
 	/* CONTENT */
