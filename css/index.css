@@ -2,8 +2,8 @@
 
 /* VARS */
 :root {
-	--black      : #000;
-	--white      : #FFF;
+	--black      : #000000;
+	--white      : #FFFFFF;
 
 	--blue       : #0065FC;
 	--light-blue : #DEEBFF;
@@ -39,6 +39,7 @@ body {
 	color            : var(--black);
 	font-size        : 2rem;
 	width            : 100vw;
+	overflow-x: hidden;
 }
 
 /* HEADINGS */
@@ -158,6 +159,7 @@ a:hover {
 	display       : flex;
 	flex-flow     : column nowrap;
 	margin-bottom : .5rem;
+	flex          : 1 1 100%;
 }
 .card-link:hover > .card {
 	box-shadow : 0 0 10px rgba(0, 0, 0, .3);
